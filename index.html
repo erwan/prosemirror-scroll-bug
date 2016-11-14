@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://prosemirror.net/#demos -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./index_files/site.css"><link rel="stylesheet" href="./index_files/prosemirror.css">
+  <link rel="stylesheet" href="./index_files/menu.css">
+  <link rel="stylesheet" href="./index_files/example-setup.css"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>ProseMirror</title><meta property="og:title" content="ProseMirror"><meta property="og:type" content="website"><meta property="og:url" content="http://prosemirror.net/"><meta property="og:image" content="http://prosemirror.net/img/picture.png"><meta property="og:description" content="In-browser structured text editing component"><style type="text/css">
+:root #content > #right > .dose > .dosesingle,
+:root #content > #center > .dose > .dosesingle
+{ display: none !important; }
+</style></head>
+
+<body>
+
+<article><p>ProseMirror is an in-browser semantic rich text editor component.
+This is what it might look like:</p>
+
+<style>
+.demoblocks {
+  margin: 0 -20px;
+}
+
+.demoblock {
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px;
+  text-indent: 5px;
+  border: 1px solid white;
+}
+
+.demoblock:hover {
+  border-radius: 5px;
+  border: 1px solid #7cf;
+}
+
+.demoblock a {
+  text-decoration: none;
+  color: #777;
+}
+
+.ProseMirror-menubar-wrapper {
+  border-radius: 10px;
+  background: white;
+  border-color: #5ad;
+}
+
+.ProseMirror-content {
+  outline: none;
+}
+
+#viewport {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.section {
+  position: absolute;
+  height: 100%;
+}
+
+.lorem {
+  margin-bottom: 20px;
+}
+
+#topbar {
+  position: relative;
+  padding: 20px;
+  background-color: lightgreen;
+}
+
+#topbar2 {
+  padding: 20px;
+  background-color: yellow;
+}
+
+#editor-wrapper {
+  height: 100%;
+}
+
+.editable {
+  position: relative;
+  height: 100%;
+  border: solid white 5px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.scroller {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.article {
+  padding: 10px 0 230px 0;
+}
+
+</style>
+
+<div id='viewport'>
+  <div class='section'>
+  <div id='topbar'>
+    This stays on top
+  </div>
+
+  <div id='editor-wrapper'>
+
+  <div id='topbar2'>
+    This stays on top too
+  </div>
+
+  <div class='editable'>
+  <div id="scroller">
+  <div class='article'>
+    <div class='lorem'>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+
+    <div id="editor" menustyle="tooltip" style="position: relative">
+      <div class="ProseMirror-menubar-wrapper">
+        <div class="ProseMirror ProseMirror-example-setup-style">
+          <div pm-container="true" class="ProseMirror-content" spellcheck="false" aria-label="" contenteditable="true">
+            <h3 pm-container="true" pm-size="22" pm-offset="0"><span pm-size="20" pm-offset="0">Control your Content</span></h3>
+            <p pm-container="true" pm-size="188" pm-offset="22"><span pm-size="36" pm-offset="0">There is something of a gap between </span><a href="http://commonmark.org/" pm-size="8" pm-offset="36">MarkDown</a><span pm-size="142" pm-offset="44"> textareas (limited, hard to use) and classical HTML WYSIWYG editors (content becomes a non-semantic blob). ProseMirror aims to fill this gap.</span></p><p pm-container="true" pm-size="329" pm-offset="210"><span pm-size="154" pm-offset="0">It does this by decoupling its content model from HTML. Documents are represented with a JavaScript data structure, and their structure is described by a </span><a href="http://prosemirror.net/guide/schema.html" pm-size="6" pm-offset="154">schema</a><span pm-size="77" pm-offset="160"> that you can provide yourself. This gives you full control over the kind of </span><a href="http://prosemirror.net/demo/dino.html" pm-size="8" pm-offset="237">elements</a><span pm-size="82" pm-offset="245"> that may appear in your document, and the way they nest and relate to each other.</span></p><ul pm-container="true" pm-size="176" pm-offset="539"><li pm-container="true" pm-size="105" pm-offset="0"><p pm-container="true" pm-size="103" pm-offset="0"><span pm-size="101" pm-offset="0">Users get a clean, consistent interface that allows them to enter only documents that fit the schema.</span></p></li><li pm-container="true" pm-size="69" pm-offset="105"><p pm-container="true" pm-size="67" pm-offset="0"><span pm-size="57" pm-offset="0">You get clean, consistent content that you can format or </span><a href="http://prosemirror.net/demo_lint.html" pm-size="7" pm-offset="57">analyze</a><span pm-size="1" pm-offset="64">.</span></p></li></ul><p pm-container="true" pm-size="50" pm-offset="715"><span pm-size="36" pm-offset="0">ProseMirror is open-source under an </span><a href="https://github.com/ProseMirror/prosemirror/blob/master/LICENSE" pm-size="3" pm-offset="36">MIT</a><span pm-size="9" pm-offset="39"> license.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='lorem'>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+
+    <div class='lorem'>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+
+  </div><!-- article -->
+  </div><!-- scroller -->
+  </div><!-- .editable -->
+
+  </div><!-- #editor-wrapper -->
+
+</div><!-- .section -->
+</div><!-- #viewport -->
+
+<script src="./index_files/bundle_basic.js"></script></article>
+
+<script src="./index_files/site.js"></script></body></html>
